@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="FitPrymuski, dieta, fit, catering">
+<link rel="stylesheet" type="text/css" href="login.css">
+<meta charset="UTF-8">
+<title>Logowanie Klienta</title>
+</head>
+<body>
+<div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>FitPrymuski</div>
+		</div>
+		<br>
+		<div class="login">
+				<input type="text" placeholder="Login" name="user" th:field="${log.login}" required><br>
+				<input type="password" placeholder="Hasło" name="password" th:field="${log.password}" required><br><br>
+				<a href="klient_panel"><input type="submit" value="Zaloguj"></a>
+				<a href="haslo"><input type="button" value="Przypomnij hasło"></a><br><br>
+				Nie masz konta? <a href="rejestracja">Zarejestruj się.</a>
+				
+				<br><br><br><br>
+				
+				<a href="zaloguj_pracownik"><input type="button" value="Panel pracownika"></a><br><br><br>
+		
+				
+		</div>
+</body>
+</html>

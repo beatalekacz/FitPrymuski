@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="FitPrymuski, dieta, fit, catering">
+<link rel="stylesheet" type="text/css" href="contact.css">
+<meta charset="UTF-8">
+<title>Panel klienta - zamówienie</title>
+</head>
+<body>
+<div class="button_cont" align="right">
+		<a class="zamow" href="zaloguj" target="blank" rel="nofollow noopener">Zamów</a>
+	</div>
+	<div class="logo" align="center">
+	<img id="logo" src="https://i.imgur.com/7H6vC6c.png">
+	</div>
+	<ul>
+		<li><a href="index">Strona Główna</a></li>
+		<li><a href="menu">Menu</a></li>
+		<li><a href="programy">Programy</a></li>
+		<li><a href="dlaczegomy">Dlaczego My?</a></li>
+		<li><a href="dowoz">Dowóz</a></li>
+		<li><a href="eventy">Organizacja Eventów</a></li>
+		<li><a href="kontakt">Kontakt</a></li>
+	</ul>
+	<br>
+		<h2>Złóż zamówienie</h2>
+	<br>
+	
+	<div class="contact">
+	<div id="container">
+  	<form action="#" th:action="@{/klient_zamowienie}" method="post">
+  	
+  	<div class="rodzaj">
+      <label for="rodzaj"></label>
+      <select placeholder="Rodzaj programu" name="rodzaj" id="name_input" required th:field="${order.name}">
+      	<option  th:value="rodzaj">Rodzaj programu</option>
+    	<option  th:value="bezglutenowa">dieta bezglutenowa</option>
+        <option  th:value="tradycyjna">dieta tradycyjna</option>
+        <option  th:value="wegetarianska">dieta wegetariańska</option>
+      </select>
+    </div>
+    
+    <div class="subject">
+      <label for="subject"></label>
+      <select placeholder="Długość programu" name="dlugosc" id="duration_input" required th:field="${order.duration}">
+        <option  th:value="dlugosc">Długość programu</option>
+  		<option  th:value="1.miesiąc">30 dni</option>
+        <option  th:value="2.miesiące">60 dni</option>
+        <option  th:value="3.miesiące">90 dni</option>
+      </select>
+    </div>
+  
+    <div class="message">
+      <label for="message"></label>
+      <textarea name="message" th:field="${order.message}" placeholder="Uwagi" id="message_input" cols="30" rows="5" required></textarea>
+    </div>
+    
+    <div class="submit">
+      <input type="submit" value="Wyślij" id="form_button"/>
+       <input type="reset" value="Wyczyść" id="form_button"/>
+    </div>
+  
+  </form>
+</div>
+</div>
+
+		<br>
+		<br>
+	</div>
+	<br>
+	<footer>
+		<footer>
+			<br>
+			<center>Wszelkie prawa zastrzeżone | FitPrymuski © 2020</center>
+		</footer>
+</body>
+</html>

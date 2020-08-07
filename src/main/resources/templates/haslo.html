@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="FitPrymuski, dieta, fit, catering">
+<link rel="stylesheet" type="text/css" href="contact.css">
+<meta charset="UTF-8">
+<title>Reset hasła</title>
+</head>
+<body>
+	<div class="button_cont" align="right">
+		<a class="zamow" href="zaloguj" target="blank" rel="nofollow noopener">Zamów</a>
+	</div>
+	<div class="logo" align="center">
+	<img id="logo" src="https://i.imgur.com/7H6vC6c.png">
+	</div>
+	<ul>
+		<li><a href="index">Strona Główna</a></li>
+		<li><a href="menu">Menu</a></li>
+		<li><a href="programy">Programy</a></li>
+		<li><a href="dlaczegomy">Dlaczego My?</a></li>
+		<li><a href="dowoz">Dowóz</a></li>
+		<li><a href="eventy">Organizacja Eventów</a></li>
+		<li><a href="kontakt">Kontakt</a></li>
+	</ul>
+	<br>
+		<h2>Reset hasła</h2>
+			
+		<center>
+		
+				Wprowadź poniżej swój adres e-mail. Na Twoją prośbę prześlemy Ci nowe, losowo wygenerowane hasło. <br>
+				<br><br>
+				
+<div class="contact">
+<div id="container">
+
+	<form action="#" th:action="@{/haslo}" method="post" id="contact_form">
+    <div class="name">
+      <label for="name"></label>
+      <input type="email" th:field="${reset.mail}" placeholder="E-mail" name="mail" id="mail" required>
+    </div>
+    <div class="submit">
+      <input type="submit" value="Wyślij" id="form_button"/>
+    </div>
+  </form>
+</div>
+</div>
+
+		</center>
+	<br><br>
+	<footer>
+		<br>
+		<center>Wszelkie prawa zastrzeżone | FitPrymuski © 2020</center>
+	</footer>
+</body>
+</html>

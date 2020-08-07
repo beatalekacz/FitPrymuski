@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="FitPrymuski, dieta, fit, catering">
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+<title>Dodaj danie</title>
+</head>
+<body>
+	<div class="button_cont" align="right">
+		<a class="zamow" href="zaloguj" target="blank" rel="nofollow noopener">Zamów</a>
+	</div>
+	<div class="logo" align="center">
+	<img id="logo" src="https://i.imgur.com/7H6vC6c.png">
+	</div>
+	<ul>
+		<li><a href="index">Strona Główna</a></li>
+		<li><a href="menu">Menu</a></li>
+		<li><a href="programy">Programy</a></li>
+		<li><a href="dlaczegomy">Dlaczego My?</a></li>
+		<li><a href="dowoz">Dowóz</a></li>
+		<li><a href="eventy">Organizacja Eventów</a></li>
+		<li><a href="kontakt">Kontakt</a></li>
+	</ul>
+	
+	<div id="dodajDanie" align="center">
+	<h2>Dodaj danie</h2>
+		<form action="#" th:action="@{/danie_dodaj}" method="post">
+			<label>Nazwa: </label><br> <input type="text" th:field="${dishmodel.name}"><br>
+			<label>Cena:</label><br> <input type="number" th:field="${dishmodel.price}"><br>
+			<label>Kaloryczność:</label><br> <input type="number" th:field="${dishmodel.kcal}"><br> 
+			<label>Opis:</label><br>
+				<select placeholder="Opis" name="opis" th:field="${dishmodel.characteristics}">
+       			 <option th:value="bezglutenowe">bezglutenowe</option>
+ 				 <option th:value="tradycyjne">tradycyjne</option>
+ 				 <option th:value="wegetriańskie">wegetariańskie</option>
+      			</select><br>
+      		<label>Kategoria:</label><br>
+      			<select placeholder="Kategoria" name="category" th:field="${dishmodel.category}">
+       			 <option th:value="śniadanie">śniadanie</option>
+ 				 <option th:value="obiad">obiad</option>
+ 				 <option th:value="kolacja">kolacja</option>
+ 				 <option th:value="deser">Ddser</option>
+      			</select>
+      		<br>
+			<br> 
+			<input type="submit" value="Wyślij"> 
+			<input type="reset" value="Wyczyść"><br>
+			<br>
+		</form>
+	</div>
+
+	<br>
+	<br>
+	<footer>
+		<br> <br>
+		<center>Wszelkie prawa zastrzeżone | FitPrymuski © 2020</center>
+	</footer>
+</body>
+</html>

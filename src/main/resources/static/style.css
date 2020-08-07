@@ -1,0 +1,282 @@
+@charset "UTF-8";
+
+html {
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 17px;
+	position: relative;
+}
+
+/* LADNE MENU */
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+	width: 100%;
+	position: sticky;
+	top: 0px;
+	z-index: 1;
+
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 40px;
+	text-decoration: none;
+}
+
+.active {
+	background-color: #lightgrey;
+}
+
+li a:hover {
+	background-color: #9B86C4;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: block;
+}
+
+#rejestracjaKlienta {
+	display: block;
+	margin-left: 30%;
+	margin-right: 30%;
+	width: 40%;
+	text-align: center;
+	
+}
+
+#logowanie {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	text-align: center;
+	border: 3px outset black;
+}
+
+#klient_panel {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	text-align: center;
+	border: 3px outset black;
+	text-decoration: none;
+}
+
+#pracownik_panel {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	text-align: center;
+	text-decoration: none;
+	border: 3px outset black;
+}
+
+.zamow {
+	color: #fff !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #9B86C4;
+	padding: 20px;
+	border-radius: 25px;
+	display: inline-block;
+	border: none;
+	transition: all 0.4s ease 0s;
+}
+
+.zamow:hover {
+	text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+	transition: all 0.4s ease 0s;
+}
+
+#txt {
+	border-width: 2px;
+	margin-left: 3%;
+	margin-right: 3%;
+	border-style: solid;
+	padding: 3%;
+	border-style: solid;
+	border-color: #9B86C4;
+	text-align: center;
+}
+
+#txtIndex {
+	border-width: 2px;
+	margin-left: 3%;
+	margin-right: 3%;
+	border-style: solid;
+	padding: 3%;
+	border-style: solid;
+	border-color: #9B86C4;
+	text-align: center;
+	width: 500px;
+}
+
+#txtMain {
+	font-size: 200%;
+	letter-spacing: 5px;
+	text-align: center;
+}
+
+#logo {
+	position: relative;
+	top: 0px;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+}
+
+.kontakty:table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 5px;
+	text-align: left;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+table.table1, th.table1, td.table1 {
+	border: none;
+	border-collapse: collapse;
+	float: center;
+}
+
+th.table1, td.table1 {
+	width: 50%;
+}
+
+table.table2, th.table2, td.table2 {
+	border: none;
+	border-collapse: collapse;
+	float: center;
+}
+
+th.table2, td.table2 {
+	width: 50%;
+}
+
+
+
+.wrap {
+	overflow: hidden;
+	margin: 10px;
+	z-index: -1;
+}
+
+.box {
+	float: left;
+	position: relative;
+	width: 20%;
+	padding-bottom: 20%;
+}
+
+.boxInner {
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	top: 10px;
+	bottom: 10px;
+	overflow: hidden;
+}
+
+.boxInner img {
+	width: 100%;
+}
+
+.boxInner .titleBox {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-bottom: -50px;
+	background: #000;
+	background: rgba(0, 0, 0, 0.5);
+	color: #FFF;
+	padding: 10px;
+	text-align: center;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox
+	{
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width : 480px) {
+	/* Smartphone view: 1 tile */
+	.box {
+		width: 100%;
+		padding-bottom: 100%;
+	}
+}
+
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+	/* Tablet view: 2 tiles */
+	.box {
+		width: 50%;
+		padding-bottom: 50%;
+	}
+}
+
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+	/* Small desktop / ipad view: 3 tiles */
+	.box {
+		width: 33.3%;
+		padding-bottom: 33.3%;
+	}
+}
+
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+	/* Medium desktop: 4 tiles */
+	.box {
+		width: 25%;
+		padding-bottom: 25%;
+	}
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, select, textarea {
+  color: #000000;
+  font: inherit;
+  margin: 0;
+}

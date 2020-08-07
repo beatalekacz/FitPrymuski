@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="FitPrymuski, dieta, fit, catering">
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+<title>FitPrymuski - Twój Catering Dietetyczny</title>
+</head>
+<body>
+	<div class="button_cont" align="right">
+		<a class="zamow" href="zaloguj" target="blank" rel="nofollow noopener">Zamów</a>
+	</div>
+	<div class="logo" align="center">
+	<img id="logo" src="https://i.imgur.com/7H6vC6c.png">
+	</div>
+	<ul>
+		<li><a href="index">Strona Główna</a></li>
+		<li><a href="menu">Menu</a></li>
+		<li><a href="programy">Programy</a></li>
+		<li><a href="dlaczegomy">Dlaczego My?</a></li>
+		<li><a href="dowoz">Dowóz</a></li>
+		<li><a href="eventy">Organizacja Eventów</a></li>
+		<li><a href="kontakt">Kontakt</a></li>
+	</ul>
+	<br>
+
+	<div id="img" align="center">
+		<img src="https://i.imgur.com/bTQNWMO.jpg" alt="FitPrymuski"
+			width="90%">
+	</div>
+
+	<div id="MainPanel" align="center">
+
+		<div id="indexcontent" align="center">
+			<div id="txtMain">Sprawdź naszą ofertę!</div>
+			<br>
+		</div>
+
+		<br>
+		<table class="table1">
+			<tr class="table1">
+				<td class="table1">
+					<div id="slideshow" align="center">
+
+						<img class="mySlides" src="https://i.imgur.com/NOfzN1w.png">
+						<img class="mySlides" src="https://i.imgur.com/ko1NyfG.png">
+						<img class="mySlides" src="https://i.imgur.com/nVpXktg.png">
+						<img class="mySlides" src="https://i.imgur.com/Jxbjre9.png">
+
+						<script>
+							var slideIndex = 0;
+							carousel();
+
+							function carousel() {
+								var i;
+								var x = document
+										.getElementsByClassName("mySlides");
+								for (i = 0; i < x.length; i++) {
+									x[i].style.display = "none";
+								}
+								slideIndex++;
+								if (slideIndex > x.length) {
+									slideIndex = 1
+								}
+								x[slideIndex - 1].style.display = "block";
+								setTimeout(carousel, 3000); // Change image every 3 seconds
+							}
+						</script>
+
+					</div>
+				</td>
+
+				<td class="table1">
+
+					<div id="txtIndex">
+						Zgrany zespół FitPrymusek pomoże w Ci w dopasowaniu i wdrożeniu
+						żywienia, którego potrzebujesz! <br> <br> Dietetyczka
+						Beata zadba o odpowiednią ilość makro i mikroelementów w Twojej
+						diecie, trenerka Justyna uwzględni zapotrzebowanie kaloryczne
+						dostosowane do poziomu Twojej dziennej aktywności, a nasza Szefowa
+						Kuchni Katarzyna zadowoli najbardziej wybredne kubki smakowe.<br>
+						<br>Z nami poczujesz się lepiej! <br> <br>
+						Koniecznie zerknij na nasze przykładowe <a href="menu">menu</a>.<br>
+						</li> <br> Zostaw wiadomość w <a href="kontakt">formularzu
+							kontaktowym</a> i zamów spersonalizowaną dietę lub skorzystaj z
+						naszych gotowych <a href="programy"> programów.</a><br>
+
+
+
+					</div>
+				</td>
+			</tr>
+
+
+		</table>
+
+		<br>
+		<footer>
+			<br>
+			<center>Wszelkie prawa zastrzeżone | FitPrymuski © 2020</center>
+		</footer>
+	</div>
+</body>
+</html>

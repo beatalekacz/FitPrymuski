@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="FitPrymuski, dieta, fit, catering">
+<link rel="stylesheet" type="text/css" href="login.css">
+<meta charset="UTF-8">
+<title>Rejestracja</title>
+</head>
+<body>
+
+<div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>FitPrymuski</div>
+		</div>
+		<br>
+		<div class="register">
+			<form action="#" th:action="@{/rejestracja}" method="post">
+			<input type="text" placeholder="Nazwa użytkownika" name="user" th:field="${account.login}"><br><br>
+			<input type="text" placeholder="Imię" name="name" th:field="${account.name}"><br><br>
+			<input type="text" placeholder="Nazwisko" name="surname" th:field="${account.surname}"><br><br>			
+			<input type="text" placeholder="Adres" name="address" th:field="${account.address}"><br><br>
+			<input type="tel" placeholder="Numer telefonu" name="phone" th:field="${account.phone}"><br><br>
+			<input type="email" placeholder="E-Mail" name="mail" th:field="${account.mail}"><br><br>
+			<input type="password" placeholder="Hasło" name="password" th:field="${account.password}">
+			<input type="password" placeholder="Potwierdź hasło" name="password" th:field="${account.password}"><br>
+			
+			<br> 
+			<input type="submit" value="Zarejestruj">
+			<input type="reset" value="Wyczyść"><br>
+
+			<br>
+		</form>
+		</div>
+</body>
+</html>

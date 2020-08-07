@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="FitPrymuski, dieta, fit, catering">
+<link rel="stylesheet" type="text/css" href="contact.css">
+<meta charset="UTF-8">
+<title>Formularz zmiany danych</title>
+</head>
+<body>
+	<div class="button_cont" align="right">
+		<a class="zamow" href="zaloguj" target="blank" rel="nofollow noopener">Zamów</a>
+	</div>
+	<div class="logo" align="center">
+	<img id="logo" src="https://i.imgur.com/7H6vC6c.png">
+	</div>
+	<ul>
+		<li><a href="index">Strona Główna</a></li>
+		<li><a href="menu">Menu</a></li>
+		<li><a href="programy">Programy</a></li>
+		<li><a href="dlaczegomy">Dlaczego My?</a></li>
+		<li><a href="dowoz">Dowóz</a></li>
+		<li><a href="eventy">Organizacja Eventów</a></li>
+		<li><a href="kontakt">Kontakt</a></li>
+	</ul>
+	<br>
+			<h2>Formularz zmiany danych</h2>
+			
+		<center>
+		Jeżeli Twoje dane uległy zmianie i potrzebujesz dokonać ich aktualizacji, skontaktuj się z nami poprzez poniższy formularz.<br><br>
+		
+		Poinformuj nas jakie zmiany powinniśmy wprowadzić.<br>
+				<br><br>
+
+<div class="contact">
+<div id="container">
+	<form action="#" th:action="@{/klient_zmianadanych}" method="post">
+    <div class="name">
+      <label for="name"></label>
+      <input type="text" th:field="${change.name}" placeholder="Imię i nazwisko" name="name" id="name_input" required>
+    </div>
+    <div class="email">
+      <label for="email"></label>
+      <input type="email" th:field="${change.mail}" placeholder="E-mail" name="email" id="email_input" required>
+    </div>
+    <div class="message">
+      <label for="message"></label>
+      <textarea name="message" th:field="${change.message}" placeholder="Twoja wiadomość" id="message_input" cols="30" rows="5" required></textarea>
+    </div>
+    <div class="submit">
+      <input type="submit" value="Wyślij" id="form_button"/>
+       <input type="reset" value="Wyczyść" id="form_button"/>
+    </div>
+  </form>
+</div>
+</div>
+
+<br>Maks. 500 znaków.
+
+
+		</center>
+	<br><br>
+	<footer>
+		<br>
+		<center>Wszelkie prawa zastrzeżone | FitPrymuski © 2020</center>
+	</footer>
+</body>
+</html>
